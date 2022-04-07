@@ -69,7 +69,7 @@ def main():
         try:
             credentials_file.write(profile_section)
         except TypeError:
-            pass
+            pass # bad
     credentials_file.close()
 
 
@@ -108,11 +108,11 @@ def parse_credentials(profile_credentials):
             'aws_session_token': session_token
         }
     except TypeError:
-        pass
+        pass # bad
     try:
         return parsed_credentials
     except UnboundLocalError:
-        pass
+        pass # bad
 
 
 def prepare_profile(parsed_credentials, profile_name):
@@ -128,11 +128,11 @@ def prepare_profile(parsed_credentials, profile_name):
         "aws_secret_access_key=" + parsed_credentials['aws_secret_access_key'] + "\n" \
         "aws_session_token=" + parsed_credentials['aws_session_token'] + "\n"
     except TypeError:
-        pass
+        pass # bad
     try:
         return profile_section
     except UnboundLocalError:
-        pass
+        pass # bad
 
 
 main ()
