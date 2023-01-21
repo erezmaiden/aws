@@ -135,4 +135,4 @@ def prepare_profile(parsed_credentials, profile_name):
         pass # bad
 
 
-main ()
+main()
